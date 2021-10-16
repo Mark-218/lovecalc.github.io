@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>love</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+body{
+background-image:url("backimg.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+width:100%;
+height:100vh;
+position:relative;}
+
+header{
+margin-top:70px;}
+
+#mainhd{background-image: linear-gradient(to right,#0099ff, #990033);
+width:100%;
+height:100;
+color:#eb4034;
+font-size:45px;
+text-transform:uppercase;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:bolder;
+letter-spacing:2px;
+padding-top:30px;
+}
+
+.foot{width:100%;
+height:100px;
+background-color:black;
+margin-top:3%;
+padding-left:200px;
+color:white;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1 id="mainhd"><marquee>LOVE CALCULATOR</marquee></h1>
+<div>
+<header>
+<div class="card m-auto text-center">
+  <div class="card-header bg-danger text-white">CHEAK YOUR LOVE</div>
+  <div class="card-body">
+  <form>
+  <div class="form-group">
+  <input type="text" name="" class="form-control text-center" 
+  placeholder="Enter your name" id="yname">
+  </div>
+  <div> <span class="pl-2 pr-2"><img src="check.png" height="35" width="35"></span></div><br>
+  
+  <div class="form-group">
+  <input type="text" name="" class="form-control text-center" 
+  placeholder="Enter love name" id="lname">
+  </div>
+  </form>
+  <br>
+  <div class="w-50 m-auto">
+  <button class="btn btn-success w-50" onclick="loveper()"> Click</button>
+  </div>
+  <br/>
+  <div>
+<input type="text" name="" id="loveval" class="form-control text-center w-50 m-auto"
+ placeholder="result">
+ </div>
+ <br/>
+  <div class="card-footer">GOD BLESS YOUR RELATIONSHIP </div>
+</div>
+<br/>
+</header> 
+
+<script>
+function loveper()
+{
+var yname =document.getElementById('yname').value;
+var lname =document.getElementById('lname').value;
+
+if(yname == "")
+{
+alert('plese enter your name');
+}
+else if(yname.length <= 2)
+{
+alert('minimum lnget is 3');
+}
+else if(!isNaN(yname)){
+alert('numbers are not allowed');
+}
+else if(lname == "")
+{
+alert('plese enter your love name');
+}
+else if(lname.length <= 2)
+{
+alert('minimum lnget is 3');
+}
+else if(!isNaN(lname)){
+alert('numbers are not allowed');
+}
+else
+{
+var data = Math.random() * 100;
+data= Math.round(data);
+document.getElementById('loveval').value = data + "%";}
+}
+</script>
+<div class="foot"
+<h4>Copyright &copy;2020 MayurPatil.</h4><br><br/>
+<h4><img src="mail.jpg" width="35" height="35"> Mayurpatil10feb2001@gmail.com</h4>
+</div>
+</body>
+</html>
